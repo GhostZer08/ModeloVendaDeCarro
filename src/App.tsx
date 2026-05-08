@@ -323,9 +323,9 @@ const CarDetails = ({ car, onBack, onTestDrive }: { car: Car, onBack: () => void
       </nav>
 
       <div className="w-full px-6 sm:px-12 lg:px-24">
-        <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl flex flex-col xl:flex-row border border-zinc-100">
+        <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl flex flex-col border border-zinc-100">
           {/* Image Gallery */}
-          <div className="xl:w-1/2 relative h-[400px] xl:h-auto min-h-[500px] group overflow-hidden">
+          <div className="w-full relative h-[400px] md:h-[600px] xl:h-[700px] max-h-[80vh] group overflow-hidden">
             <AnimatePresence>
               <motion.img 
                 key={currentImageIndex}
@@ -340,7 +340,7 @@ const CarDetails = ({ car, onBack, onTestDrive }: { car: Car, onBack: () => void
                 decoding="async"
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent xl:hidden z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 pointer-events-none" />
             
             {/* Gallery Navigation Arrows */}
             <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 hover:bg-white text-zinc-900 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-lg backdrop-blur-sm cursor-pointer z-20">
@@ -363,7 +363,7 @@ const CarDetails = ({ car, onBack, onTestDrive }: { car: Car, onBack: () => void
           </div>
 
           {/* Details Content */}
-          <div className="xl:w-1/2 p-4 md:p-6 lg:p-8 flex flex-col bg-[#f4f5f8] gap-4">
+          <div className="w-full p-4 md:p-6 lg:p-8 flex flex-col bg-[#f4f5f8] gap-4">
             
             {/* Main Info Card */}
             <div className="bg-white rounded-md shadow-sm border border-zinc-100 p-6 md:p-8">
